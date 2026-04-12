@@ -34,7 +34,8 @@ mod tests {
     #[test]
     fn test_empty_state_has_high_ambiguity() {
         let state = DesignState::new();
-        assert!(AmbiguityCalculator::is_high_ambiguity(&state));
+        let config = RouterConfig::default();
+        assert!(AmbiguityCalculator::is_high_ambiguity(&state, &config));
         assert_eq!(AmbiguityCalculator::calculate(&state), 1.0);
     }
 
@@ -47,7 +48,8 @@ mod tests {
             quality_score: None,
             needs_style_research: None,
         };
-        assert!(!AmbiguityCalculator::is_high_ambiguity(&state));
+        let config = RouterConfig::default();
+        assert!(!AmbiguityCalculator::is_high_ambiguity(&state, &config));
         assert_eq!(AmbiguityCalculator::calculate(&state), 0.0);
     }
 

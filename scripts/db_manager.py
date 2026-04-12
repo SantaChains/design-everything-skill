@@ -155,13 +155,14 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description="Design Everything DB Manager")
     parser.add_argument("--init", action="store_true", help="Initialize database")
-    parser.add_argument("--register", nargs=6, metavar=("NAME", "SLUG", "DESC", "CATEGORY", "KEYWORDS", "TSV"),
+    parser.add_argument("--register-category", nargs=3, metavar=("NAME", "SLUG", "DESC"),
+                       help="Register a category")
+    parser.add_argument("--register-module", nargs=6, metavar=("NAME", "SLUG", "DESC", "CATEGORY", "KEYWORDS", "TSV"),
                        help="Register a module")
     parser.add_argument("--list", action="store_true", help="List all modules")
+    parser.add_argument("--list-categories", action="store_true", help="List all categories")
     parser.add_argument("--search", help="Search modules")
     parser.add_argument("--stats", action="store_true", help="Show statistics")
-    parser.add_argument("--import-tsv", nargs=2, metavar=("SLUG", "PATH"), help="Import TSV to module")
-    parser.add_argument("--export-tsv", nargs=1, metavar=("SLUG"), help="Export module to TSV")
 
     args = parser.parse_args()
     db = DesignDBManager()
@@ -170,34 +171,36 @@ def main():
         print("Database initialized.")
         print(f"Location: {db.db_path}")
 
-    elif args.register:
-        name, slug, desc, category, keywords, tsv = args.register
+    elif args.register_category:
+        name, slug, desc = args.register_category
+        db.register_category(name, slug, desc)
+        print(f"Category '{name}' registered.")
+
+    elif args.register_module:
+        name, slug, desc, category, keywords, tsv = args.register_module
         db.register_module(name, slug, desc, category, keywords, tsv)
         print(f"Module '{name}' registered.")
 
     elif args.list:
         for m in db.get_all_modules():
-            print(f"[{m['category']}] {m['name']} ({m['slug']})")
+            category_name = m.get('category_name', 'N/A')
+            print(f"[{category_name}] {m['name']} ({m['slug']}) - {m.get('item_count', 0)} items")
+
+    elif args.list_categories:
+        for c in db.get_all_categories():
+            print(f"{c['name']} ({c['slug']})")
 
     elif args.search:
         for m in db.search_modules(args.search):
-            print(f"[{m['category']}] {m['name']}: {m['description']}")
+            category_name = m.get('category_name', 'N/A')
+            print(f"[{category_name}] {m['name']}: {m['description']}")
 
     elif args.stats:
         stats = db.get_module_stats()
+        print(f"Categories: {stats['total_categories']}")
         print(f"Modules: {stats['total_modules']}")
-        print(f"Items: {stats['total_items']}")
         for c in stats["by_category"]:
-            print(f"  {c['category']}: {c['count']}")
-
-    elif args.import_tsv:
-        slug, path = args.import_tsv
-        count = db.import_tsv(slug, path)
-        print(f"Imported {count} items to '{slug}'")
-
-    elif args.export_tsv:
-        output = db.export_module_to_tsv(args.export_tsv[0])
-        print(f"Exported to: {output}")
+            print(f"  {c['name']}: {c['count']} modules")
 
     else:
         parser.print_help()
