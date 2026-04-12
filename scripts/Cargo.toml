@@ -1,0 +1,44 @@
+[package]
+name = "design-everything"
+version = "0.1.0"
+edition = "2021"
+authors = ["Design Everything Team"]
+description = "High-performance skill router and data management tools for design-everything skill"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rusqlite = { version = "0.31", features = ["bundled"] }
+csv = "1.3"
+clap = { version = "4.5", features = ["derive"] }
+anyhow = "1.0"
+thiserror = "1.0"
+
+[lib]
+name = "design_everything"
+path = "src/lib.rs"
+
+[[bin]]
+name = "skill_router"
+path = "src/bin/skill_router.rs"
+
+[[bin]]
+name = "tsv_reader"
+path = "src/bin/tsv_reader.rs"
+
+[[bin]]
+name = "db_manager"
+path = "src/bin/db_manager.rs"
+
+[[bin]]
+name = "index_manager"
+path = "src/bin/index_manager.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+
+[dev-dependencies]
+tempfile = "3.10"

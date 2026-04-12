@@ -1,0 +1,34 @@
+title	content	tags	metadata
+游戏核心循环|Game Core Loop	核心循环四要素：目标→挑战→反馈→奖励。玩家在循环中产生心流(Flow)。循环层级：核心循环(每局)、中等循环(任务)、宏观循环(成长)。	游戏,核心循环,心流,机制	style=principle
+ MDA框架|MDA Framework	MDA框架：机制(Mechanics)-动态(Dynamics)-体验(Aesthetics)。机制是规则，动态是运行时的行为，体验是玩家感受。	游戏,mda,框架,理论	style=principle
+游戏化八角模型|Octalysis Framework	八种核心动力：成就感、所有权、创造性、好奇心、拥有感、社交影响、稀缺性、使命感。每种动力有左右脑/正面/负面变体。	游戏,游戏化,激励,八角模型	format=list
+心流理论|Flow Theory	心流产生于技能与挑战的平衡。挑战太高=焦虑，太低=无聊。设计目标：让玩家持续在轻微挑战区边缘。	游戏,心流,平衡,挑战	style=principle
+ intrinsic motivation|内在动机	内在动机三要素：自主性(选择感)、胜任感(成长感)、关联感(社交感)。游戏本身就是内在动机设计典范。	游戏,内在动机,动机,心理学	style=principle
+目标梯度效应|Goal Gradient Effect	离目标越近越有动力(老鼠迷宫实验)。应用：进度条可视化、距离终点设奖励、VIP阶段式权益。	游戏,目标,激励,行为	style=principle
+潘德霍夫街效应|Bandwagon Effect	人们倾向于做多数人做的选择。应用：在线人数显示、排行榜、成就系统、解锁人数提示。	游戏,社交,心理学,效应	style=principle
+损失厌恶|Loss Aversion	损失的心理影响是等量收益的2倍。应用：限时未领=失去、每日签到奖励(断签清零)、试用后转正式。	游戏,损失厌恶,激励,行为经济学	style=principle
+沉没成本谬误|Sunk Cost Fallacy	人们不愿放弃已投入的事物。健康应用：已练天数显示；不健康应用：装备强化失败率设计。	游戏,沉没成本,行为经济学,心理	style=principle
+随机奖励机制|Skinner Box	可变奖励间隔(Variable Ratio)最令人上瘾：斯金纳箱实验。应用：抽卡、开箱、刷怪掉落、随机任务奖励。	游戏,随机奖励,斯金纳,成瘾机制	style=principle
+巴图模型|Bartle's Player Types	四类玩家：成就者(Achiever)、探索者(Explorer)、社交者(Socializer)、杀手(Killer)。每类有不同激励设计方式。	游戏,玩家类型,巴图,细分	format=list
+ quaternary theory|四象限理论	玩家四象限：使命型(强目标)、故事型(强叙事)、和谐型(弱目标)、实验型(无目标)。吸引不同类型玩家需不同设计。	游戏,玩家类型,理论,细分	format=list
+游戏战斗系统|Combat System	战斗系统五类型：动作(实时操作)、回合制(策略规划)、即时战术(AP管理)、暂停战术(命令执行)、自动战斗(放置收割)。	游戏,战斗,系统,核心玩法	format=list
+伤害计算公式|Damage Formula	伤害公式三模式：加减法(ATK-DEF)、乘算(ATK×技能系数)、复合(基础伤害+百分比加成+暴击)。影响数值平衡策略性。	游戏,伤害,数值,公式	style=code
+属性克制|Counter System	属性克制设计：石头剪刀布(循环克制)、多属性矩阵(克制+抗性)、抗性穿透(叠加计算)。克制关系影响配队策略。	游戏,属性,克制,策略	style=code
+经济系统|Game Economy	经济系统三要素：产出(资源来源)、消耗(用途去向)、回收(资源移除)。通货膨胀控制：设置产出上限、强制消耗、周期性清零。	游戏,经济,资源,数值设计	style=principle
+货币系统|Money System	货币三类型：基础货币(游戏币)、高级货币(付费)、特殊货币(活动)。用途：购买、升级、加速、解锁。	游戏,货币,付费,经济	style=principle
+升级经验曲线|EXP Curve	经验曲线四模式：线性(固定增量)、指数(越级难)、对数(快速满级)、S曲线(两头慢中间快)。影响玩家节奏和留存。	游戏,经验,升级,成长曲线	style=code
+装备强化系统|Equipment Enhancement	强化系统设计：成功率机制、保护机制、精炼继承、套装效果。失败惩罚影响玩家风险决策。	游戏,装备,强化,成长	style=principle
+技能树设计|Skill Tree	技能树三形式：线性解锁(前置条件)、网状结构(多路径)、星座式(自由组合)。分支点设计影响build多样性。	游戏,技能,天赋,build	format=list
+天赋系统|Talent System	天赋系统设计：职业限定/通用、主动/被动、激活条件(等级/任务/成就)。天赋多样性=build可能性。	游戏,天赋,技能,个性化	style=principle
+任务系统|Quest System	任务类型：主线(剧情驱动)、支线(探索奖励)、日常(留存)、活动(限时)、成就(挑战)。引导玩家行为。	游戏,任务,日常,引导	format=list
+引导系统|Tutorial System	引导四层次：被动引导(强制流程)、主动引导(提示+操作)、探索引导(文档+提示)、无引导(玩家自探索)。循序渐进。	游戏,新手引导,教程,体验	style=principle
+ HUD设计|HUD Design	HUD五要素：生命/体力(核心状态)、小地图/罗盘(位置方向)、任务追踪(目标方向)、背包/技能(资源快捷)、消息/提示(反馈)。	游戏,hud,界面,信息展示	style=principle
+关卡设计原则|Level Design Principles	关卡设计七原则：目标清晰、路径多样、难度梯度、节奏变化、视觉引导、反馈充足、奖励匹配。	游戏,关卡,地图,设计	format=list
+解密游戏设计|Puzzle Design	解密设计四要素：线索呈现、逻辑链条、操作反馈、难度曲线。一次性谜题vs重复性谜题设计重心不同。	游戏,解密,谜题,设计	style=principle
+ roguelike设计|Roguelike Design	Roguelike四核心：随机生成、永久死亡、回合制/即时、简短局次。变体：Roguelite(有永久进度)、Baby Rogue(简化版)。	游戏,roguelike,随机,死亡	style=principle
+收集系统|Collection System	收集系统设计：完成度显示、图鉴展示、收集奖励、社交炫耀。驱动探索和重复游玩。	游戏,收集,完成度,图鉴	style=principle
+成就系统|Achievement System	成就系统设计：进度成就(数值累积)、挑战成就(特定条件)、隐藏成就(惊喜)、社交成就(分享)。触发反馈要即时。	游戏,成就,激励,目标	style=principle
+排行榜系统|Ranking System	排行榜设计：实时/周期排名、排名区间奖励、可见范围(全球/好友/公会)、防作弊机制。驱动竞争心理。	游戏,排行榜,竞争,社交	style=principle
+公会系统|Guild System	公会系统设计：加入门槛、贡献机制、资源共享、社交互动、集体目标。增强玩家归属和长期留存。	游戏,公会,社交,多人	style=principle
+PVP匹配系统|PVP Matchmaking	匹配系统设计：Elo/MMR评分、等待时间平衡、组队限制、ban/pick机制。确保公平前提下减少等待。	游戏,pvp,匹配,竞技	style=principle
+AI行为设计|AI Behavior Design	AI行为设计四模式：状态机(有限状态)、行为树(分层决策)、效用系统(分数选择)、规划器(目标分解)。复杂度由需求决定。	游戏,ai,行为,npc	style=principle
