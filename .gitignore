@@ -47,6 +47,3 @@ target/
 *.temp
 *.bak
 
-data/*.db
-design-brief.json
-validation-report.json
