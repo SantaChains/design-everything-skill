@@ -1,6 +1,0 @@
-{
-  "ambiguity_threshold": 0.5,
-  "research_priority": 0.85,
-  "brainstorming_priority": 0.95,
-  "self_improving_priority": 0.65
-}
