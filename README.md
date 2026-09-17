@@ -78,3 +78,45 @@ design-everything/
 ## 新鲜度
 
 引用外部资料带来源与日期, 核验不了标注"未核验"; 本仓库声明与磁盘实现保持一致, 发现不一致以磁盘为准并报告。
+
+## 路线图
+
+总目标判据: 任意设计意图一句话进入, 经域路由、契约化阶段推进、确定性工具校验, 产出过 gate 的可验证交付物。以下为现状差距与打磨次序。
+
+### 基线 (已达成)
+
+- 视觉六阶段契约, design-brief.json 文件态, gate pass/fail 无评分
+- py 单一 CLI 八子命令, FTS5 CJK 检索知识库, db 入库免构建
+- 目录收敛至 skill 运行所需, 归档区 (d:\ABASE\_Godot\design-archive) 独立于仓库
+
+### 阶段 1: 域扩展 (design-core 到 design-family)
+
+- 叙事域 skill: 分镜/剪辑/摄影/剧本/姿势/场景/动画/游戏机制, 数据已在库, 缺 skill 封装与阶段映射; 剧本域需阶段变体 (人物弧光, 三幕节拍) 而非照搬视觉六阶段
+- 文学素材库 skill: design-archive/literature 已有底子 (literature_library.kdl 与六篇研究文档)
+- agent 域 skill: references/ai_design.md 与 ai_agent.md 迁入, 归 agent 开发
+- 域间协作契约: S5 元素清单可触发跨域 skill 协作, 共享同一 gate 语义与 brief 结构
+
+### 阶段 2: 工具与标准深化
+
+- 对比度升级: APCA (WCAG 3 草案的可感知对比度算法) 与 WCAG 2.x 并列输出; 色盲模拟 (protan/deutan/tritan)
+- 字体搭配: 知识模块 (TSV) 加搭配规则工具, 设计最高频痛点之一
+- 网格与间距: 8pt 网格计算, 间距阶梯生成
+- 色板扩展: 现有四 scheme 之外增加亮度分层与中性色阶梯
+- golden case 评测落地: evaluation_cases.md 中规划 3-5 个冒烟用例, 任何 prompt 或脚本改动必跑, 防 prompt 回归
+- 知识新鲜度硬约束: TSV metadata 强制 created_at 与 source 字段, 构建时计算 stale 标记, 超期条目不静默沿用
+- references 与 TSV 去重: 单一事实源, 重复内容生成化或删除
+
+### 阶段 3: 生态与自迭代
+
+- RULES.kdl validator 以 py 接管 (需 mini KDL 解析或转格式), 恢复规则校验能力
+- self-improving 经验回写落地: 定义经验入库格式 (可验证命令加来源日期), 定期审计, 不可验证即删除
+- godot 生态联动: 与 godogen、godot-asset-forge 资产管线对接, AI 自动生成资产按本 skill 规范产出
+- agent 适配指南: 豆包/workbuddy/traework/qoder 等按本规范产出资产
+- 多语言: 触发词与检索关键词双语兼容
+
+### 阶段 4: 万物设计判据
+
+- 新领域接入 = TSV 模块 + 阶段映射 + 工具三件套, 不改核心, 域路由自动生效
+- 跨域共性平移工具化: 平移模式库, 记录"域 A 原理到域 B 应用"的可验证条目 (公理六落地)
+- 全链路验收: 模糊需求经 Inversion 提问、契约流程、工具校验, 到 gate 通过的交付物, 中间无人工补位环节
+
