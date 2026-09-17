@@ -58,12 +58,11 @@ design-everything/
 │   └── README.md            工具链说明与退役记录
 ├── data/
 │   ├── tsv/                 事实源 (18 模块)
-│   ├── design_knowledge.db  构建产物 (gitignore)
+│   ├── design_knowledge.db  构建产物 (已入库, 免构建即用)
 │   └── evaluation_cases.md  golden case 规划
 ├── references/              L3 深度知识: styles, color, composition, ui, ux + 叙事域 8 篇
 ├── RULES.kdl                设计规则声明 (rust validator 已退役, 待后续接管)
-├── .github/workflows/       CI: py 工具链冒烟 (构建库, 检索, 对比度, gate 反向用例)
-└── .gitignore               忽略构建产物与运行态文件
+└── .gitignore               忽略编辑器缓存与备份 (.history, *.bak, *.log)
 ```
 
 历史遗留 (doc/, docs/, specs/, templates/, examples/, style-guides/, 文学素材 md 与 kdl, NOT_SORT.MD, LINK.md, OTHER_SKILLS.md, openmemory.md, 内嵌 .trae 技能合集) 已于 2026-09-17 移出至 d:\ABASE\_Godot\design-archive, 旧内容可经 git 历史 (021750f 及之前) 追溯。
