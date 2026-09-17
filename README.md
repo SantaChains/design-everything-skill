@@ -66,7 +66,7 @@ design-everything/
 └── .gitignore               忽略构建产物与运行态文件
 ```
 
-历史遗留, 待 P0 清洁移出: doc/, templates/, examples/, style-guides/, specs/, 文学素材*.md, NOT_SORT.MD, LINK.md, OTHER_SKILLS.md, openmemory.md。
+历史遗留 (doc/, docs/, specs/, templates/, examples/, style-guides/, 文学素材 md 与 kdl, NOT_SORT.MD, LINK.md, OTHER_SKILLS.md, openmemory.md, 内嵌 .trae 技能合集) 已于 2026-09-17 移出至 d:\ABASE\_Godot\design-archive, 旧内容可经 git 历史 (021750f 及之前) 追溯。
 
 ## 模块索引
 
